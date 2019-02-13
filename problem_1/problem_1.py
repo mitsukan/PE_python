@@ -7,6 +7,4 @@ def problem_1(num):
             total += count
         elif count % 5 == 0:
             total += count
-        print('printing count: {}'.format(count))
-        print('printing total: {}'.format(total))
     return total
