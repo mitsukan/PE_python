@@ -10,3 +10,6 @@ def square_of_sum(num):
     l = list(range(1, num + 1))
     return sum(l) ** 2
 
+
+def difference(num):
+    return square_of_sum(num) - sum_of_squares(num)
