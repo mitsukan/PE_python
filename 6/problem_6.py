@@ -9,3 +9,4 @@ def sum_of_squares(num):
 def square_of_sum(num):
     l = list(range(1, num + 1))
     return sum(l) ** 2
+
