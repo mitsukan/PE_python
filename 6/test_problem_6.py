@@ -3,10 +3,11 @@ import problem_6
 
 class Test6(unittest.TestCase):
 
-    def test_can_work_out_example(self):
+    def test_example_sum_of_squares(self):
         self.assertEqual(problem_6.sum_of_squares(10), 385)
 
-
+    def test_example_square_of_sum(self):
+        self.assertEqual(problem_6.square_of_sum(10), 3025)
 
 
 if __name__ == '__main__':
