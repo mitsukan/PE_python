@@ -24,3 +24,10 @@ class Problem7(object):
         elif div_count == 2:
             return True
 
+    def aggregate_primes(self, num):
+        count = 0
+        while len(self.primes) < num:
+            if self.is_prime(count) == True:
+                self.primes.append(count)
+            count += 1
+        return self.primes[num-1]
