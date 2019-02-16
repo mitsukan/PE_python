@@ -9,9 +9,19 @@ class Problem_8(object):
             answer *= int(self.blob[i])
         return answer
 
+    def solver(self, range_size):
+        index_start = 0
+        index_end = range_size
+        highest_number = 0
 
+        while index_end <= 1000:
+            answer = self.multiply_range(index_start, index_end)
+            if answer > highest_number:
+                highest_number = answer
+            index_start += 1
+            index_end += 1
 
-
+        return highest_number
 
 
 
