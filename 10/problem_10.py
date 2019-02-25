@@ -1,6 +1,9 @@
 
 class Prob10(object):
 
+    def __init__(self):
+        primes = []
+
     def is_prime(self, num):
         div_count = 0
         count = num
@@ -21,4 +24,3 @@ class Prob10(object):
         # Else if number can only be divisble by itself and 1
         elif div_count == 2:
             return True
-
