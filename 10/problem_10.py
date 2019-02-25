@@ -2,7 +2,7 @@
 class Prob10(object):
 
     def __init__(self):
-        primes = []
+        self.primes = []
 
     def is_prime(self, num):
         div_count = 0
@@ -24,3 +24,11 @@ class Prob10(object):
         # Else if number can only be divisble by itself and 1
         elif div_count == 2:
             return True
+
+    def create_primes(self, num):
+        i = 0
+        while i < num:
+            if self.is_prime(i) == True:
+                self.primes.append(i)
+            i += 1
+        return self.primes
