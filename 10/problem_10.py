@@ -32,3 +32,10 @@ class Prob10(object):
                 self.primes.append(i)
             i += 1
         return self.primes
+
+    def sum_of_primes(self, num):
+        self.create_primes(num)
+        totals = 0
+        for i in self.primes:
+            totals += i
+        return totals
