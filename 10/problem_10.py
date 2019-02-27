@@ -4,25 +4,17 @@ class Prob10(object):
     def __init__(self):
         self.primes = []
 
-    def is_prime(self, num):
-        if num == 2:
-            return True
-        if num == 9:
-            return False
-        if num > 1:
-            for i in range(2, num):
-                if num % i == 0:
-                    break
-                else:
-                    return True
-        return False
-
     def create_primes(self, num):
-        i = 1
-        while i < num:
-            if self.is_prime(i) == True:
-                self.primes.append(i)
-            i += 1
+        for possiblePrime in range(2, num + 1):
+
+            # Assume number is prime until shown it is not.
+            isPrime = True
+            for num in range(2, int(possiblePrime ** 0.5) + 1):
+                if possiblePrime % num == 0:
+                    isPrime = False
+                    break
+            if isPrime:
+                self.primes.append(possiblePrime)
         return self.primes
 
     def sum_of_primes(self, num):
