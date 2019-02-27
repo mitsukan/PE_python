@@ -7,6 +7,10 @@ class Test7(unittest.TestCase):
         m = problem_7.Problem7()
         self.assertEqual(m.aggregate_primes(6), 13)
 
+    def test_return_solution(self):
+        m = problem_7.Problem7()
+        print('solution to 7:', m.aggregate_primes(10001))
+
 if __name__ == '__main__':
     unittest.main()
 
