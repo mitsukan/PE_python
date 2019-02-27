@@ -34,5 +34,11 @@ class Test3(unittest.TestCase):
         newprob.aggregate_primes(200)
         self.assertEqual(newprob.prime_factors(13195), [5,7,13,29])
 
+    def test_problem_solver(self):
+        n = problem_3.Problem3()
+        n.aggregate_primes(int(600851475143**0.5))
+        print('solution to problem 3...')
+        print(n.prime_factors(600851475143))
+
 if __name__ == '__main__':
     unittest.main()

@@ -4,32 +4,20 @@ class Problem3(object):
         self.primes = []
 
     def is_prime(self, num):
-        div_count = 0
-        count = num
-        # Initial check for numbers 0 and 1
+        # Assume number is prime until shown it is not.
+        isPrime = True
         if num == 0 or num == 1:
             return False
-        else:
-            # Looping backwards
-            while count > 0:
-                # if number is divisible by current number
-                if num % count == 0:
-                    # Add to divisible count
-                    div_count += 1
-                count -= 1
-        # If divider count is more than 2, return false
-        if div_count > 2:
-            return False
-        # Else if number can only be divisble by itself and 1
-        elif div_count == 2:
-            return True
+        for i in range(2, int(num ** 0.5)+1):
+            if num % i == 0:
+                isPrime = False
+                break
+        return isPrime
 
     def aggregate_primes(self, num):
-        count = 0
-        while count <= num:
-            if self.is_prime(count) == True:
-                self.primes.append(count)
-            count += 1
+        for possiblePrime in range(2, num + 1):
+            if self.is_prime(possiblePrime) == True:
+                self.primes.append(possiblePrime)
         return self.primes
 
     def prime_factors(self, num):
