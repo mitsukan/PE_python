@@ -12,12 +12,11 @@ class Test10(unittest.TestCase):
         n = problem_10.Prob10()
         self.assertEqual(n.sum_of_primes(10), 17)
 
-    # def test_solution_finder(self):
-    #     n = problem_10.Prob10()
-    #     print('solution to problem 10:')
-    #     print(n.sum_of_primes(2000000))
-    #     print('printing primes')
-    #     print(n.primes)
+    def test_solution_finder(self):
+        n = problem_10.Prob10()
+        print('solution to problem 10:')
+        print(n.sum_of_primes(2000000))
+
 
 if __name__ == '__main__':
     unittest.main()
