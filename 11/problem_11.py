@@ -45,4 +45,3 @@ class Prob11(object):
                     self.high_combo = [self.grid[row_index][column_index], self.grid[row_index + 1][column_index],
                                      self.grid[row_index + 2][column_index], self.grid[row_index + 3][column_index]]
 
-    
