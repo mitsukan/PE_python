@@ -15,3 +15,4 @@ class Test17(unittest.TestCase):
         self.assertEqual(n.count(7), 5)
         self.assertEqual(n.count(8), 5)
         self.assertEqual(n.count(9), 4)
+        self.assertEqual(n.count(10), 3)
